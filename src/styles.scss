@@ -1,1 +1,46 @@
+@use "./shared/styles/mixins.scss";
+@use "./shared/styles/base.scss";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import "~bootstrap/dist/css/bootstrap.css";
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: base.$font-stack;
+  color: #000;
+}
+a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.navbar {
+  .navbar-nav {
+    a {
+      color: base.$primary-color !important;
+    }
+  }
+}
+.register {
+  @include mixins.loginTheme(rgb(235, 197, 197));
+}
+.login {
+  @include mixins.loginTheme(rgb(238, 236, 187));
+}
+// .center-div {
+//   max-width: 800px;
+//   padding: 10px;
+//   max-height: 400px;
+//   position: absolute;
+//   margin-top: 50%;
+//   margin-left: 50%;
+//   top: 50%;
+//   left: 50%;
+// }

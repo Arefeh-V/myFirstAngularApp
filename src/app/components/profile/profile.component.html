@@ -1,0 +1,37 @@
+<div class="container p-5">
+  <div class="mb-5 fw-bold">
+    <a href="#" (click)="onBack()"> <-- go back</a>
+  </div>
+  <div class="row">
+    <div class="col-12 col-md-2">
+      <img
+        mat-card-avatar
+        src="{{ user.avatar_url }}"
+        alt=""
+        width="100%"
+        height="100%"
+        class="rounded-circle border border-4 border-warning"
+      />
+    </div>
+    <div class="col-12 col-md-9">
+      <div class="h-100">
+        <div class="d-flex gap-4 flex-column justify-conent-center">
+          <div><span class="fw-bold">user type: </span> {{ user.type }}</div>
+          <div><span class="fw-bold">user name: </span> {{ user.login }}</div>
+          <div>
+            <span class="fw-bold">git url: </span
+            ><a href="{{ user.html_url }}">{{ user.html_url }}</a>
+          </div>
+          <div>
+            <span class="fw-bold">date created: </span
+            >{{ user.created_at | jalali }}
+          </div>
+          <div>
+            <span class="fw-bold">time created: </span
+            >{{ user.created_at | jalaliTime }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

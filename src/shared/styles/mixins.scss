@@ -1,0 +1,10 @@
+@mixin loginTheme($bg: DarkGray) {
+  background-color: $bg;
+  box-shadow: 0 0 4px rgba(71, 67, 67, 0.25);
+  color: rgb(70, 65, 36);
+  max-width: 400px;
+  width: 100%;
+  border-radius: 16px;
+  border: 10px #000;
+  padding: 45px;
+}

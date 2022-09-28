@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div *ngFor="let user of users" class="col-12 col-md-3 p-3">
+      <mat-card
+        class="d-flex flex-column gap-4 justify-content-center align-items-center cursor-pointer"
+        [routerLink]="['/profile', user.login]"
+      >
+        <img mat-card-avatar src="{{ user.avatar_url }}" />
+        <mat-card-title class="fw-semibold fs-5">{{
+          user.login
+        }}</mat-card-title>
+      </mat-card>
+    </div>
+  </div>
+</div>

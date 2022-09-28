@@ -3,7 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  ServicesUrl: 'http://gw-booxell-local.afarineshdse.ir',
+  Authurl: 'http://auth-booxell-local.afarineshdse.ir',
 };
 
 /*
